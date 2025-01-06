@@ -1,0 +1,31 @@
+<div>
+  <h2>Details: {{ museum?.name }}</h2>
+  <form (ngSubmit)="onSave()">
+    <label>Name:
+      <input [(ngModel)]="museum.name" name="name"/>
+    </label>
+    <br />
+
+    <label>Address:
+      <input [(ngModel)]="museum.address" name="address"/>
+    </label>
+    <br />
+
+    <label>Latitude:
+      <input type="number" [(ngModel)]="museum.latitude" name="latitude"/>
+    </label>
+    <br />
+
+    <label>Longitude:
+      <input type="number" [(ngModel)]="museum.longitude" name="longitude"/>
+    </label>
+    <br />
+
+    <label>Website:
+      <input [(ngModel)]="museum.website" name="website"/>
+    </label>
+    <br />
+
+    <button type="submit">Save</button>
+  </form>
+</div>
