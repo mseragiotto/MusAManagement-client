@@ -1,7 +1,9 @@
 <div>
   <h2>Authors</h2>
-  <input type="text" [(ngModel)]="searchTerm" placeholder="Search authors..." />
-  <button (click)="onAddAuthor()">+ Add author</button>
+  <div class="search-bar">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search authors..." />
+    <button (click)="onAddAuthor()">+ Add author</button>
+  </div>
 
   <table>
     <thead>

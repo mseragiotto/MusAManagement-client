@@ -11,6 +11,8 @@ import { MuseumDetailsComponent } from './app/features/museum/museum-details/mus
 import { AuthorsListComponent } from './app/features/authors/authors-list/authors-list.component';
 import { AuthorDetailComponent } from './app/features/authors/author-detail/author-detail.component';
 
+import { authGuard } from './app/core/guards/auth.guard';
+
 // To enable production mode, uncomment the following line
 /// if (environment.production) { enableProdMode(); }
 
@@ -19,7 +21,7 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    
+    canActivate: [authGuard],
     children: [
       { path: 'museum-details', component: MuseumDetailsComponent },
       { path: 'authors', component: AuthorsListComponent },
